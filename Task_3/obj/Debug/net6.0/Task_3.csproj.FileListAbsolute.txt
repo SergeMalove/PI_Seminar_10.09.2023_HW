@@ -1,0 +1,15 @@
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\bin\Debug\net6.0\Task_3.exe
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\bin\Debug\net6.0\Task_3.deps.json
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\bin\Debug\net6.0\Task_3.runtimeconfig.json
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\bin\Debug\net6.0\Task_3.dll
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\bin\Debug\net6.0\Task_3.pdb
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.csproj.AssemblyReference.cache
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.AssemblyInfoInputs.cache
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.AssemblyInfo.cs
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.csproj.CoreCompileInputs.cache
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.dll
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\refint\Task_3.dll
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.pdb
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\Task_3.genruntimeconfig.cache
+D:\GB\ProgramingIntroducing\PI_Seminar_10.09.2023_HW\Task_3\obj\Debug\net6.0\ref\Task_3.dll
