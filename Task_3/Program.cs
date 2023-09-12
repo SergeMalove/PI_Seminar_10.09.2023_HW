@@ -89,5 +89,5 @@ if (CheckMatrix(matrix1, matrix2))
 }
 else
 {
-    Console.WriteLine("Данные матрицы невозможно перемножить.");
+    Console.WriteLine("Данные матрицы невозможно перемножить.\n");
 }
