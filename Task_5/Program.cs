@@ -16,54 +16,74 @@ int[,] Create2DArray(int rows, int columns)
     return new int[rows, columns];
 }
 
-void Fill2DArray(int[,] array)
+void Fill2DArray(int[,] array, int turn)
 {
     int number = 1;
     int length = array.GetLength(0);
+    int height = 0;
     int direction = 0;
     int i = 0;
     int j = 0;
 
-    while (number <= array.GetLength(0) + array.GetLength(1))
+    while (number <= array.GetLength(0) * array.GetLength(1))
     {
         switch (direction)
         {
             case 0:
                 for (; j < length; j++)
                 {
-                    array[i, j] = number;
+                    if (turn == 0)
+                        array[i, j] = number;
+                    else
+                        array[j, i] = number;
                     number++;
                 }
-                length--;
                 direction = 1;
+                j--;
+                i++;
                 break;
             case 1:
                 for (; i < length; i++)
                 {
-                    array[i, j] = number;
+                    if (turn == 0)
+                        array[i, j] = number;
+                    else
+                        array[j, i] = number;
                     number++;
                 }
                 direction = 2;
+                i--;
+                j--;
+                length--;
                 break;
             case 2:
-                for (; j >= 0; j--)
+                for (; j >= height; j--)
                 {
-                    array[i, j] = number;
+                    if (turn == 0)
+                        array[i, j] = number;
+                    else
+                        array[j, i] = number;
                     number++;
                 }
                 direction = 3;
-                length--;
+                height++;
+                i--;
+                j++;
                 break;
             case 3:
-                for (; i >= 0; i--)
+                for (; i >= height; i--)
                 {
-                    array[i, j] = number;
+                    if (turn == 0)
+                        array[i, j] = number;
+                    else
+                        array[j, i] = number;
                     number++;
                 }
                 direction = 0;
+                i++;
+                j++;
                 break;
         }
-
     }
 }
 
@@ -77,6 +97,8 @@ void Print2DArray(int[,] array)
     }
 }
 
-int[,] array = Create2DArray(4, 4);
-Fill2DArray(array);
+int arraySize = InputNum("Введите размер массива: ");
+int turn = InputNum("Введите направление заполнения (0 - почасовой стрелке, 1 - против часовой): ");
+int[,] array = Create2DArray(arraySize, arraySize);
+Fill2DArray(array, turn);
 Print2DArray(array);
