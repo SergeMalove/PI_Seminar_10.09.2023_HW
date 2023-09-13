@@ -19,13 +19,14 @@ int[,] Create2DArray(int rows, int columns)
 void Fill2DArray(int[,] array, int turn)
 {
     int number = 1;
-    int length = array.GetLength(0);
-    int height = 0;
+    int length = array.GetLength(1);
+    int height = array.GetLength(0);
+    int border = 0;
     int direction = 0;
     int i = 0;
     int j = 0;
 
-    while (number <= array.GetLength(0) * array.GetLength(1))
+    while (number <= length * height)
     {
         switch (direction)
         {
@@ -39,11 +40,12 @@ void Fill2DArray(int[,] array, int turn)
                     number++;
                 }
                 direction = 1;
+                length--;
                 j--;
                 i++;
                 break;
             case 1:
-                for (; i < length; i++)
+                for (; i < height; i++)
                 {
                     if (turn == 0)
                         array[i, j] = number;
@@ -54,10 +56,10 @@ void Fill2DArray(int[,] array, int turn)
                 direction = 2;
                 i--;
                 j--;
-                length--;
+                height--;
                 break;
             case 2:
-                for (; j >= height; j--)
+                for (; j >= border; j--)
                 {
                     if (turn == 0)
                         array[i, j] = number;
@@ -66,12 +68,12 @@ void Fill2DArray(int[,] array, int turn)
                     number++;
                 }
                 direction = 3;
-                height++;
+                border++;
                 i--;
                 j++;
                 break;
             case 3:
-                for (; i >= height; i--)
+                for (; i >= border; i--)
                 {
                     if (turn == 0)
                         array[i, j] = number;
@@ -106,8 +108,9 @@ void Print2DArray(int[,] array)
     }
 }
 
-int arraySize = InputNum("Введите размер массива: ");
-int turn = InputNum("Введите направление заполнения (0 - почасовой стрелке, 1 - против часовой): ");
-int[,] array = Create2DArray(arraySize, arraySize);
+int height = InputNum("Введите высоту массива: ");
+int length = InputNum("Введите ширину массива: ");
+int turn = InputNum("Введите направление заполнения (0 - по часовой стрелке, 1 - против часовой стрелке): ");
+int[,] array = Create2DArray(height, length);
 Fill2DArray(array, turn);
 Print2DArray(array);
