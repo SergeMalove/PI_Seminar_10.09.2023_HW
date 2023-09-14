@@ -79,3 +79,5 @@ else
 {
     Console.WriteLine($"Массив с введенными размерами {length} x {width} x {height} не может быть заполнен случайными не повторяющимися двузначными цифрами\n");
 }
+
+Console.WriteLine($"Case {direction}, length = {length}, height = {height}, border = {border}, i = {i}, j = {j}");

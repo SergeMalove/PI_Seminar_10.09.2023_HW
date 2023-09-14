@@ -43,6 +43,8 @@ void Fill2DArray(int[,] array, int turn)
                 length--;
                 j--;
                 i++;
+                Print2DArray(array);
+                Console.WriteLine();
                 break;
             case 1:
                 for (; i < height; i++)
@@ -57,6 +59,8 @@ void Fill2DArray(int[,] array, int turn)
                 i--;
                 j--;
                 height--;
+                Print2DArray(array);
+                Console.WriteLine();
                 break;
             case 2:
                 for (; j >= border; j--)
@@ -71,10 +75,12 @@ void Fill2DArray(int[,] array, int turn)
                 border++;
                 i--;
                 j++;
+                Print2DArray(array);
                 break;
             case 3:
                 for (; i >= border; i--)
                 {
+                    Console.WriteLine(number);
                     if (turn == 0)
                         array[i, j] = number;
                     else
@@ -84,6 +90,8 @@ void Fill2DArray(int[,] array, int turn)
                 direction = 0;
                 i++;
                 j++;
+                Print2DArray(array);
+                Console.WriteLine();
                 break;
         }
     }
