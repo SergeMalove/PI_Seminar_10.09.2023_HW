@@ -26,7 +26,7 @@ void Fill2DArray(int[,] array, int turn)
     int i = 0;
     int j = 0;
 
-    while (number <= length * height)
+    while (number <= array.GetLength(0) * array.GetLength(1))
     {
         switch (direction)
         {
@@ -43,8 +43,6 @@ void Fill2DArray(int[,] array, int turn)
                 length--;
                 j--;
                 i++;
-                Print2DArray(array);
-                Console.WriteLine();
                 break;
             case 1:
                 for (; i < height; i++)
@@ -59,8 +57,6 @@ void Fill2DArray(int[,] array, int turn)
                 i--;
                 j--;
                 height--;
-                Print2DArray(array);
-                Console.WriteLine();
                 break;
             case 2:
                 for (; j >= border; j--)
@@ -75,12 +71,10 @@ void Fill2DArray(int[,] array, int turn)
                 border++;
                 i--;
                 j++;
-                Print2DArray(array);
                 break;
             case 3:
                 for (; i >= border; i--)
                 {
-                    Console.WriteLine(number);
                     if (turn == 0)
                         array[i, j] = number;
                     else
@@ -90,8 +84,6 @@ void Fill2DArray(int[,] array, int turn)
                 direction = 0;
                 i++;
                 j++;
-                Print2DArray(array);
-                Console.WriteLine();
                 break;
         }
     }
@@ -99,19 +91,12 @@ void Fill2DArray(int[,] array, int turn)
 
 void Print2DArray(int[,] array)
 {
-    int length = array.GetLength(0);
-    int digits = 0;
-    while (length != 0)
-    {
-        length /= 10;
-        digits++;
-    }
+    int digits = (array.GetLength(0) * array.GetLength(1)).ToString().Length;
+
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($"{array[i, j]:d2}\t");
-        }
+            Console.Write(array[i, j].ToString("D" + digits.ToString()) + "\t");
         Console.WriteLine();
     }
 }
@@ -119,6 +104,8 @@ void Print2DArray(int[,] array)
 int height = InputNum("Введите высоту массива: ");
 int length = InputNum("Введите ширину массива: ");
 int turn = InputNum("Введите направление заполнения (0 - по часовой стрелке, 1 - против часовой стрелке): ");
+Console.WriteLine();
 int[,] array = Create2DArray(height, length);
 Fill2DArray(array, turn);
 Print2DArray(array);
+Console.WriteLine();
